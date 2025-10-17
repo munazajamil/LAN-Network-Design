@@ -1,1 +1,53 @@
+Switch>show mac address-table
+          Mac Address Table
+-------------------------------------------
 
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+-----------------------------------------------
+"Then i did ping from computer A, so that it can trace the MAC address of the devices"
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 192.168.1.2 (Computer B IP)
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time=1ms TTL=128
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.2: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.1.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.1.3 (Server IP)
+
+Pinging 192.168.1.3 with 32 bytes of data:
+
+Reply from 192.168.1.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.3: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.1.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+-------------------------------------------------------
+Now you can see the MAC address table have data of devices.
+
+
+Switch>show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0050.0f92.5b8a    DYNAMIC     Fa0/2
+   1    0090.2b87.dca8    DYNAMIC     Fa0/3
+   1    00e0.8fdb.3719    DYNAMIC     Fa0/1
+------------------------------------------------
+So this is how MAC address table looks like!!
